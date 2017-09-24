@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Programme</title>
+    <link type="text/css" rel="stylesheet" href="../public/css/codrops-header.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ddd;
+        }
+
+        .exam_content_style {
+            height: 100%;
+            width: 100%;
+        }
+
+        .exam_nav {
+            width: 600px;
+            height: 400px;
+            background-color: #fff;
+            margin: 150px auto;
+        }
+
+        .exam_type {
+            height: 300px;
+            width: 600px;
+        }
+
+        h1 {
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        table {
+            height: 90%;
+            width: 100%;
+            margin: 20px auto;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .start_btn {
+            margin-left: 10px;
+            border-image: none;
+            border-radius: 4px;
+            border-style: solid;
+            border-width: 1px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+            padding: 4px 12px;
+            text-align: center;
+            background-color: #006DCC;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .exam_show {
+            height: 100%;
+            width: 100%;
+            background: #dddddd;
+        }
+
+        .exam_show_content {
+            height: 600px;
+            width: 1000px;
+            margin: 20px auto;
+            background-color: #FFFFFF;
+        }
+
+        .exam_show_header {
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            font-size: 1.2em;
+            font-weight: 400;
+            text-align: center;
+            background-color: #EA5200;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .exam_show_header_title {
+            float: left;
+            margin-right: 20px;
+            padding-left: 50px;
+        }
+
+        .timeShow {
+            float: right;
+            margin-right: 40px;
+        }
+
+        .exam_content {
+            border: 2px solid #eeeeee;
+            width: 76%;
+            height: 76%;
+            margin: 5px 0 0 5px;
+            float: left;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .change_subject {
+            height: 85%;
+            border: 1px solid #aaaaaa;
+            box-shadow: 0 0 5px rgba(212, 226, 63, 0.45);
+            -moz-box-shadow: 0 0 5px rgba(212, 226, 63, 0.45);
+            -webkit-box-shadow: 0 0 5px rgba(212, 226, 63, 0.45);
+        }
+
+        .title_content {
+            border: 1px solid #eee;
+            height: 30%;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .title_content p.exam_subject {
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .subjs_option {
+            height: 55%;
+        }
+
+        .subjs_option a {
+            display: block;
+            height: 48px;
+            width: 98%;
+            margin: 0 auto;
+            border: 1px solid darkgrey;
+            margin-top: 10px;
+        }
+
+        .sub_option a .option_result {
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .subjs_option a input {
+            margin-top: 20px;
+        }
+
+        .subjs_option a span {
+            color: #000;
+        }
+
+        .title_select_btn {
+            height: 12%;
+        }
+
+        .title_select_btn a {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            width: 100px;
+            margin: 18px 40px 0 0;
+            float: right;
+            background-color: #2ad080;
+            box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.6);
+            -moz-box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.6);
+            -webkit-box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.6);
+        }
+
+        .exam_completed {
+            float: right;
+            width: 210px;
+            height: 76%;
+            margin: 5px 5px 0 0;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 28%;
+            border-radius: 50%;
+            background: green;
+        }
+
+        .pie_left, .pie_right {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .left, .right {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: #aaaaaa;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
+        }
+
+        .pie_right, .right {
+            clip: rect(0, auto, auto, 100px);
+        }
+
+        .pie_left, .left {
+            clip: rect(0, 100px, auto, 0);
+        }
+
+        .mask {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            left: 25px;
+            top: 25px;
+            background: #FFF;
+            position: absolute;
+            text-align: center;
+            line-height: 150px;
+            font-size: 16px;
+        }
+
+        .exam_subject_number {
+            float: left;
+            width: 98%;
+            height: 15%;
+            margin: 5px 9px;
+        }
+
+        .exam_subject_number .subItems {
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            width: 60px;
+            margin: 14px 30px;
+            float: left;
+            font-size: 2em;
+            font-weight: 500;
+            background-color: #999999;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 3px 3px 3px rgba(0, 10, 0, 0.3);
+        }
+    </style>
+    <script src="../public/js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script>
+        $(function () {
+            $('.circle').each(function (index, el) {
+                var num = $(this).find('span').text() * 3.6;
+                if (num <= 180) {
+                    $(this).find('.right').css('transform', "rotate(" + num + "deg)");
+                } else {
+                    $(this).find('.right').css('transform', "rotate(180deg)");
+                    $(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
+                }
+            });
+
+            var check_btn = $('.check_btn');
+            var programme_btn = $('.programme_btn');
+            var fill_btn = $('.fill_btn');
+            var next_sub = $('.next_sub');
+            var submit_exam_btn = $('.submit_exam_btn');
+
+            check_btn.click(function () {
+                $('#codrops-header').hide();
+                $('#exam_content_style').hide();
+                $('#subject1').css('backgroundColor', 'green');
+            });
+            programme_btn.click(function () {
+                $('#codrops-header').hide();
+                $('#exam_content_style').hide();
+            });
+            fill_btn.click(function () {
+                $('#codrops-header').hide();
+                $('#exam_content_style').hide();
+            });
+            submit_exam_btn.click(function () {
+                $.confirm({
+                    title: '确定提交',
+                    content: '正在考试ing，确定提交',
+                    type: 'blue',
+                    buttons: {
+                        ok: {
+                            text: "确定提交",
+                            btnClass: 'btn-primary',
+                            keys: ['enter'],
+                            action: function () {
+                                $('#exam_content_style').show();
+                                $('#exam_show').hide();
+                                console.log('the user clicked confirm');
+                            }
+                        },
+                        cancel: {
+                            text: "取消",
+                            keys: ['esc'],
+                            action: function () {
+                                console.log('the user clicked cancel');
+                            }
+                        }
+                    }
+                });
+            });
+            var count = 0;
+            next_sub.click(function () {
+                count++;
+                $('#subject' + count).css('backgroundColor', '#aaa');
+                $('#subject' + (count + 1)).css('backgroundColor', 'green');
+                $('.title_content>p').text('下一题');
+                if (count > 6) {
+                    count = 0;
+                    next_sub.unbind("click");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<header class="codrops-header" id="codrops-header">
+    <div class="left_div">
+        <span class="site_name"><a href="#">ExamOnline</a></span>
+        <ul class="left_nav">
+            <li><a href="index.html">首页</a></li>
+            <li>题库
+                <ul>
+                    <li><a href="#">公司真题</a></li>
+                    <li><a href="#">专项练习</a></li>
+                    <li><a href="online_programme.html">在线考试</a></li>
+                    <li><a href="#">考研真题</a></li>
+                </ul>
+            </li>
+            <li><a href="#">课程</a></li>
+            <li><a href="#">求职</a></li>
+        </ul>
+    </div>
+    <div class="right_div">
+        <ul class="right_nav">
+            <li><span class="userInfo">个人中心</span>
+                <ul>
+                    <li><a href="#">个人主页</a></li>
+                    <li><a href="#">账号设置</a></li>
+                    <li><a href="#">我的简历</a></li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="exam_content_style" id="exam_content_style">
+    <div class="exam_nav">
+        <div class="exam_type">
+            <h1>考试题型</h1>
+            <table border="0">
+                <tr style="background-color: #faffbd">
+                    <th>题型</th>
+                    <th>题目数量</th>
+                    <th>分数</th>
+                    <th>操作</th>
+                </tr>
+                <tr style="background-color: #eeeeee">
+                    <td>选择题</td>
+                    <td>8</td>
+                    <td>5 * 8</td>
+                    <td><a class="start_btn check_btn" href="#"><span>开始考试</span></a></td>
+                </tr>
+                <tr style="background-color: #faffbd">
+                    <td>编程题</td>
+                    <td>3</td>
+                    <td>10 + 20 + 20</td>
+                    <td><a class="start_btn programme_btn" href="#"><span>开始考试</span></a></td>
+                </tr>
+                <tr style="background-color: #eeeeee">
+                    <td>解答题</td>
+                    <td>5</td>
+                    <td>5 * 2</td>
+                    <td><a class="start_btn fill_btn" href="#"><span>开始考试</span></a></td>
+                </tr>
+            </table>
+        </div><!-- /exam_type-->
+    </div><!--/exam_nav--->
+</div><!--/exam_content--->
+<div class="exam_show" id="exam_show">
+    <div class="exam_show_content">
+        <div class="exam_show_header">
+            <div class="exam_show_header_title">ExamOnline</div><!--/exam_show_header_title--->
+            <div class="timeShow">
+                <span>考试剩余时间:</span>
+                <span class="timeLeft">01:40:00</span>
+            </div><!--/timeShow--->
+        </div><!--/exam_show_header--->
+        <div class="exam_content">
+            <div class="change_subject">
+                <div class="title_content">
+                    <p class="exam_subject">请答题</p>
+                </div>
+                <div class="subjs_option">
+                    <a class="sub_option" href="javascript:vivo(0)">
+                        <input type="radio"><span>A</span><span class="option_result p1">1</span>
+                    </a>
+                    <a class="sub_option" href="javascript:vivo(0)">
+                        <input type="radio"><span>B</span><span class="option_result p2">2</span>
+                    </a>
+                    <a class="sub_option" href="javascript:vivo(0)">
+                        <input type="radio"><span>C</span><span class="option_result p3">3</span>
+                    </a>
+                    <a class="sub_option" href="javascript:vivo(0)">
+                        <input type="radio"><span>D</span><span class="option_result p4">4</span>
+                    </a>
+                </div><!--subjs_option-->
+            </div>
+            <div class="title_select_btn">
+                <a class="next_sub" href="#"><span>下一题</span></a>
+                <a class="submit_exam_btn" href="#"><span>提前交卷</span></a>
+                <a class="prev_sub" href="#"><span>上一题</span></a>
+            </div>
+        </div><!--/exam_content--->
+        <div class="exam_completed">
+            <div class="circle">
+                <div class="pie_left">
+                    <div class="left"></div>
+                </div>
+                <div class="pie_right">
+                    <div class="right"></div>
+                </div>
+                <div class="mask"><span>80</span>%</div>
+            </div>
+        </div><!--/exam_completed--->
+        <div class="exam_subject_number">
+            <a class="subItems subject1" id="subject1" href="javascript:vivo(0)"><span>1</span></a>
+            <a class="subItems subject2" id="subject2" href="javascript:vivo(0)"><span>2</span></a>
+            <a class="subItems subject3" id="subject3" href="javascript:vivo(0)"><span>3</span></a>
+            <a class="subItems subject4" id="subject4" href="javascript:vivo(0)"><span>4</span></a>
+            <a class="subItems subject5" id="subject5" href="javascript:vivo(0)"><span>5</span></a>
+            <a class="subItems subject6" id="subject6" href="javascript:vivo(0)"><span>6</span></a>
+            <a class="subItems subject7" id="subject7" href="javascript:vivo(0)"><span>7</span></a>
+            <a class="subItems subject8" id="subject8" href="javascript:vivo(0)"><span>8</span></a>
+        </div><!--/exam_subject_number--->
+    </div><!--/exam_show_content--->
+</div><!--/exam_show--->
+</body>
+</html>

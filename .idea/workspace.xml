@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5e1676a-4077-45af-b857-34fb896de827" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/20.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/42.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/14.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/38.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/63.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/129.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/115.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/95.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/100.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/39.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/37.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/132.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/99.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/127.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/70.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/18.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/47.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/46.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/65.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/125.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/25.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/67.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/105.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/130.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/17.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/128.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/109.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/19.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/102.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/92.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/10.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/28.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/45.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/107.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/36.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/74.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/114.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/32.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/26.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/84.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/69.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/6.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/96.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/98.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/44.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/121.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/124.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/72.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/8.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/54.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/12.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/56.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/134.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/83.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/108.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/11.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/77.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/50.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/81.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/110.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/9.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/122.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/window.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/62.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/90.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/29.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/35.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/119.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/16.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/43.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/34.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/22.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/80.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/79.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/30.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/1.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/res.qrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/55.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/33.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/51.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/5.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/40.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/15.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/4.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/chatRoom.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/106.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/87.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/76.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/89.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/58.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/91.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/7.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/82.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/88.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/49.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/94.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/68.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/24.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/133.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/93.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/113.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/52.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/73.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/85.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/2.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/66.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/101.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/login.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/60.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/103.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/126.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/111.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/53.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/120.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/86.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/78.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/117.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/123.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/48.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/64.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/13.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/116.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/71.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/104.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/75.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/21.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/41.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/59.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/31.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/97.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/112.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/131.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/57.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/3.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/23.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/27.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/61.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../QT/haoIM code/client/pictures/118.bmp" />
+    </list>
+    <ignored path="ExamOnline.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ExamOnline" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="online_programme.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/online_programme.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6605617">
+              <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
+              <folding>
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/signup.html" />
+        <option value="$PROJECT_DIR$/views/alter-password.html" />
+        <option value="$PROJECT_DIR$/router/admin.js" />
+        <option value="$PROJECT_DIR$/views/main/index.html" />
+        <option value="$PROJECT_DIR$/views/signup.html" />
+        <option value="$PROJECT_DIR$/views/login.html" />
+        <option value="$PROJECT_DIR$/router/main.js" />
+        <option value="$PROJECT_DIR$/router/add.js" />
+        <option value="$PROJECT_DIR$/models/User.js" />
+        <option value="$PROJECT_DIR$/router/api.js" />
+        <option value="$PROJECT_DIR$/schemas/users.js" />
+        <option value="$PROJECT_DIR$/routes/add.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/database/DBConfig.js" />
+        <option value="$PROJECT_DIR$/routes/main.js" />
+        <option value="$PROJECT_DIR$/database/userSQL.js" />
+        <option value="$PROJECT_DIR$/database/userSignupSQL.js" />
+        <option value="$PROJECT_DIR$/../201410101732/css/normalize.css" />
+        <option value="$PROJECT_DIR$/public/css/demo.css" />
+        <option value="$PROJECT_DIR$/public/css/menu_bubble.css" />
+        <option value="$PROJECT_DIR$/public/css/codrops-header.css" />
+        <option value="$PROJECT_DIR$/public/css/htmleaf-demo.css" />
+        <option value="$PROJECT_DIR$/public/js/circleChart.min.js" />
+        <option value="$PROJECT_DIR$/routes/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/database/userLoginSQL.js" />
+        <option value="$PROJECT_DIR$/routes/api.js" />
+        <option value="$PROJECT_DIR$/views/bubble.html" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/routes/admin.js" />
+        <option value="$PROJECT_DIR$/views/login_signup.html" />
+        <option value="$PROJECT_DIR$/views/online_programme.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <exe-path />
+    <config-path />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamOnline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="E:\Program Files (x86)\nodejs\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/chao1/Desktop/MyWork/Web/ExamOnline/views/login_signup.html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline\public\js" />
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline\public\css" />
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline" />
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline\routes" />
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline\views" />
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline\views\main" />
+      <recent name="C:\Users\chao1\Desktop\MyWork\Web\ExamOnline\public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.online_programme.html">
+    <configuration default="false" name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ExamOnline/views/login.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="E:/Program Files (x86)/nodejs/node" path-to-js-file="$PROJECT_DIR$/routes/app.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ExamOnline/views/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="login_signup.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ExamOnline/views/login_signup.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="online_programme.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ExamOnline/views/online_programme.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="api.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="E:/Program Files (x86)/nodejs/node" path-to-js-file="api.js" working-dir="$PROJECT_DIR$/routes">
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.api.js" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.login_signup.html" />
+      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.online_programme.html" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.online_programme.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.login_signup.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5e1676a-4077-45af-b857-34fb896de827" name="Default" comment="" />
+      <created>1505788724923</created>
+      <option name="number" value="Default" />
+      <updated>1505788724923</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14836325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27508456" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990981" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27559054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14836325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/userSignupSQL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login_signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="351" column="25" selection-start-line="351" selection-start-column="25" selection-end-line="351" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alter-password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/gVerify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/set-password-strength.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/alter-password-strength.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/pwd-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/set-password-strength.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/alter-password-strength.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9285715">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new-resume.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files (x86)/nodejs/node_global/node_modules/swing/node_modules/_hammerjs@2.0.8@hammerjs/hammer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6030928">
+          <caret line="2642" column="0" selection-start-line="2642" selection-start-column="0" selection-end-line="2642" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/pwd-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alter-password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04962406">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4916108">
+          <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2140351">
+          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/classie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2725146">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6421053">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/menu_bubble.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52040815">
+          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65146196">
+          <caret line="511" column="13" selection-start-line="511" selection-start-column="12" selection-end-line="511" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/legacy.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9298246">
+          <caret line="815" column="18" selection-start-line="815" selection-start-column="18" selection-end-line="815" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/userSignupSQL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31812865">
+          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27914613">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nodejs/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.055555556">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/DBConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.0789475">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0263157">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="101" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/userLoginSQL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2782324">
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37870854">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/codrops-header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.868422">
+          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login_signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.118673645">
+          <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29668412">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38952535">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62193125">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/online_programme.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6605617">
+          <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#3;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

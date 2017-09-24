@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExamOnline</title>
+    <link rel="stylesheet" media="screen" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("http://demo.tomexam.com/skins/images/backgrounds/001.jpg") no-repeat;
+            background-size: cover;
+            -moz-background-size: cover;
+        }
+        #login_signup_form {
+            width: 500px;
+            margin: 50px auto;
+        }
+        fieldset{
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
+        .title_img{
+            width: 50px;
+            height: 50px;
+        }
+        label{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        input{
+            font-size: 16px;
+        }
+        table{
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .login_btn, .submit_btn{
+            margin-left: 10px;
+            border-image: none;
+            border-radius: 4px;
+            border-style: solid;
+            border-width: 1px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+            padding: 4px 12px;
+            text-align: center;
+            background-color: #006DCC;
+            color: #FFF;
+        }
+        .signup_btn, .cancle_btn{
+            border-image: none;
+            border-radius: 4px;
+            border-style: solid;
+            border-width: 1px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+            padding: 4px 12px;
+            text-align: center;
+            background-color: #FFFFFF;
+            color: #000;
+        }
+        .login_div{
+            height: 300px;
+            width: 500px;
+            margin: 200px auto;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        .login_username,.login_password, .user_type {
+            height: 28px;
+            width: 230px;/*269px**/
+            margin-left: 10px;
+            border: 1px solid #999;
+            border-radius: 3px;
+            background-color: #faffbd;
+        }
+        .user_type{
+            background-color: #fff;
+        }
+        .login_btn {
+            width: 150px;/**180px**/
+        }
+        .signup_btn {
+            width: 80px; /**90px*/
+        }
+        .signup_div{
+            display: none;
+            height: 630px;
+            width: 500px;
+            /*margin: 50px auto;*/
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        .signup_username, .signup_password, .repassword, .occupation_type {
+            height: 28px;
+            width: 209px;
+            margin-left: 10px;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+        /*密码强度*/
+        .pw_stength {
+            float: right;
+            position: relative;
+            top: 20px;
+            right: 160px;
+            width: 180px;
+            text-align: center;
+        }
+        .pw_bar{
+            background: url("http://demo.tomexam.com/skins/images/pwd-1.png") no-repeat;
+            height: 14px;
+            width: 179px;
+            overflow: hidden;
+        }
+        .pw_bar_on{
+            background: url("http://demo.tomexam.com/skins/images/pwd-2.png") no-repeat;
+            width: 0;
+            height: 14px;
+            position: absolute;
+            top: 1px;
+            left: 2px;
+            transition: width .5s ease-in;
+            -moz-transition: width .5s ease-in;
+            -webkit-transition: width .5s ease-in;
+            -o-transition: width .5s ease-in;
+        }
+        .pw_weak .pw_defule{ width:0;}
+        .pw_weak .pw_bar_on {width: 60px;}
+        .pw_medium .pw_bar_on {width: 120px;}
+        .pw_strong .pw_bar_on {width: 179px;}
+        .pw_txt {padding-top: 2px;width: 180px;overflow: hidden;}
+        .pw_txt span {
+            color: #707070;
+            float: left;
+            font-size: 12px;
+            text-align: center;
+            width: 58px;
+        }
+        .submit_btn {
+            width: 140px;/**180px**/
+        }
+        .cancle_btn {
+            width: 70px;/**90px*/
+        }
+        input.error {
+            border: 1px solid red;
+        }
+        label.error {
+            padding-left: 10px;
+            padding-bottom: 2px;
+            font-size: 10px;
+            font-weight: bold;
+            color: #EA5200;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.validator.setDefaults({
+                submitHandler: function() {
+                    console.log("Submit");
+                }
+            });
+            $("form").validate({
+                rules: {
+                    login_username: {
+                        required: true,
+                        rangeLength: [2, 16]
+                    },
+                    login_password: {
+                        required: true,
+                        rangeLength: [6, 16]
+                    },
+                    login_validate_txt: {
+                        required: true,
+                        minLength: 4
+                    },
+                    signup_username: {
+                        required: true,
+                        rangeLength: [2, 16]
+                    },
+                    signup_password: {
+                        required: true,
+                        rangeLength: [6, 16]
+                    },
+                    repassword: {
+                        required: true,
+                        rangeLength: [6, 16],
+                        equalTo: "#signup_password"
+                    },
+                    signup_validate_txt: {
+                        required: true,
+                        minLength: 4
+                    }
+                },
+                messages: {
+                    login_username: {
+                        required: "请输入用户名",
+                        rangeLength: $.validator.format("用户名长度为{0}到{1}的字符串")
+                    },
+                    login_password: {
+                        required: "请输入密码",
+                        rangeLength: $.validator.format("用户名长度为{0}到{1}的字符串")
+                    },
+                    login_validate_txt: {
+                        required: "请输入验证码",
+                        minLength: $.validator.format("验证码必须是{0}个字符")
+                    },
+                    signup_username: {
+                        required: "请输入用户名",
+                        rangeLength: $.validator.format("用户名长度为{0}到{1}的字符串")
+                    },
+                    signup_password: {
+                        required: "请输入密码",
+                        rangeLength: $.validator.format("密码长度为{0}到{1}的字符串")
+                    },
+                    repassword: {
+                        required: "请再次输入密码",
+                        rangeLength: $.validator.format("密码长度为{0}到{1}的字符串"),
+                        equalTo: $.validator.format("两次输入密码不一")
+                    },
+                    signup_validate_txt: {
+                        required: "请输入验证码",
+                        minLength: $.validator.format("验证码必须是{0}个字符")
+                    }
+                }
+            });
+
+            $("#signup_password").keyup(function (event) {
+                var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+                var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+                var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+                if (false == enoughRegex.test($(this).val())) {
+                    $('#level').removeClass('pw_weak');
+                    $('#level').removeClass('pw_medium');
+                    $('#level').removeClass('pw_strong');
+                    $('#level').addClass('pw_defule');
+                    //密码小于六位的时候，密码强度图片都为灰色
+                }
+                else if (strongRegex.test($(this).val())) {
+                    $('#level').removeClass('pw_weak');
+                    $('#level').removeClass('pw_medium');
+                    $('#level').removeClass('pw_strong');
+                    $('#level').addClass('pw_strong');
+                    //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强
+                }
+                else if (mediumRegex.test($(this).val())) {
+                    $('#level').removeClass('pw_weak');
+                    $('#level').removeClass('pw-medium');
+                    $('#level').removeClass('pw_strong');
+                    $('#level').addClass('pw_medium');
+                    //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等
+                }
+                else {
+                    $('#level').removeClass('pw_weak');
+                    $('#level').removeClass('pw_medium');
+                    $('#level').removeClass('pw_strong');
+                    $('#level').addClass('pw_weak');
+                    //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的
+                }
+                return true;
+            });
+            var login_btn = $('#login_btn');
+            var signup_btn = $('#signup_btn');
+            var submit_btn = $("#submit_btn");
+            var cancle_btn = $('#cancle_btn');
+            console.log($('#user_type').val());
+            login_btn.click(function(){
+//                window.location.href = "index.html";
+                $.ajax({
+                    type: 'post',
+                    url: '/api/user/login',
+                    data: {
+                        username: $('#login_username').val(),
+                        password: $('#login_password').val(),
+                        user_type: $('#user_type').val()
+                    },
+                    dateType: 'json',
+                    async: false,
+                    cache: false,
+                    timeout: 5000,
+                    success: function(result){
+                        if(!result.code) {
+                            alert(result.code);
+                            setTimeout(function(){
+                                $('.login_div').css('display','none');
+                                window.location.href = 'http://localhost:63342/ExamOnline/views/index.html';
+//                                window.open('http://localhost:63342/ExamOnline/views/index.html');
+//                                window.close();
+                            },1000);
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log('error function:' + textStatus + "\n" + errorThrown);
+                    }
+                });
+            });
+            signup_btn.click(function(){
+                $('.login_div').css('display','none');
+                $('.signup_div').css('display','block');
+            });
+            submit_btn.click( function(){
+                $.ajax({
+                    type: 'post',
+                    url: '/api/user/register',
+                    data: {
+                        username: $("#signup_username").val(),
+                        password: $("#signup_password").val(),
+                        repassword: $("#repassword").val(),
+                        occupation: $("#occupation_type").val()
+                    },
+                    dataType: 'json',
+                    async: false,
+                    cache: false,
+                    timeout: 5000,
+                    success: function(result){
+                        if(!result.code) {
+                            alert(result.code);
+                            setTimeout(function(){
+                                $('.login_div').css('display','block');
+                                $('.signup_div').css('display','none');
+                            },2000);
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log('error function:' + textStatus + "\n" + errorThrown);
+                    }
+                });
+            });
+            cancle_btn.click(function(){
+                $('.login_div').css('display','block');
+                $('.signup_div').css('display','none');
+            });
+        });
+    </script>
+</head>
+<body>
+<form id="login_signup_form">
+    <fieldset>
+        <div class="login_div">
+            <table border="0">
+                <tr>
+                    <td align="center">
+                        <img class="title_img" src="http://demo.tomexam.com/skins/images/logo_max.png">
+                    </td>
+                    <td>
+                        <span style="font-size: 24px;padding-left: 30px;">ExamOnline测试版</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <label for="login_username">用户名</label>
+                    </td>
+                    <td >
+                        <input class="login_username" id="login_username" type="text" name="login_username" title="请输入用户名">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <label>密码</label>
+                    </td>
+                    <td>
+                        <input class="login_password" id="login_password" type="password" name="login_password">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <label>类型</label>
+                    </td>
+                    <td>
+                        <select id="user_type" class="user_type" title="请选择用户类型" required>
+                            <option value="">请选择</option>
+                            <option value="管理员">管理员</option>
+                            <option value="用户">用户</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr style="width: 80px;">
+                    <td></td>
+                    <td>
+                        <input id="login_btn" class="login_btn" type="button" value="登录"/>
+                        <input id="signup_btn" class="signup_btn" type="button" value="注册"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="signup_div">
+            <table border="0">
+                <tr>
+                    <td align="center">
+                        <img class="title_img" src="http://demo.tomexam.com/skins/images/logo_max.png">
+                    </td>
+                    <td>
+                        <span style="font-size: 24px;padding-left: 30px;">ExamOnline测试版</span>
+                    </td>
+                </tr>
+
+                <tr style="height:30px;">
+                    <td></td>
+                    <td>
+                        <span style="font-size: 12px;;padding-left: 30px;">填写以下表单信息，注册成为新用户</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                        <label for="signup_username">用户名</label>
+                    </td>
+                    <td >
+                        <input id="signup_username" class="signup_username" type="text" name="signup_username">
+                        <!-- <span style="color: red;margin-left: 20px;">*</span> -->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                        <label for="signup_password">密码</label>
+                    </td>
+                    <td>
+                        <input id="signup_password" class="signup_password" type="password" name="signup_password">
+                        <!-- <span style="color: red;margin-left: 20px;">*</span> -->
+                        <div id="level" class="pw_stength" style="margin-bottom:20px;">
+                            <div class="pw_bar"></div>
+                            <div class="pw_bar_on"></div>
+                            <div class="pw_txt">
+                                <span>弱</span>
+                                <span>中</span>
+                                <span>强</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" style="width: 85px;">
+                        <label for="repassword">确认密码</label>
+                    </td>
+                    <td>
+                        <input id="repassword" class="repassword" type="password" name="repassword">
+                        <!-- <span style="color: red;margin-left: 20px;">*</span> -->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                        <label for="occupation_type">职业</label>
+                    </td>
+                    <td>
+                        <select id="occupation_type"  class="occupation_type" title="请选择你的职业" required>
+                            <option value="">请选择</option>
+                            <option value="学生">学生</option>
+                            <option value="前端工程师">前端工程师</option>
+                            <option value="软件工程师">软件工程师</option>
+                            <option value="硬件工程师">硬件工程师</option>
+                            <option value="网络工程师">网络工程师</option>
+                        </select>
+                        <!-- <span style="color: red;margin-left: 20px;">*</span> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input id="submit_btn" class="submit_btn" type="button" value="提交"/>
+                        <input id="cancle_btn" class="cancle_btn" type="button" value="取消"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>

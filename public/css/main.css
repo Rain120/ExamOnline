@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	height: 40px;
+	background-color: #368ee0;
+}
+header .head-tools{
+	line-height: 40px;
+	height: 40px;
+	width: 400px;
+	text-align: right;
+	padding-right: 30px;
+	float: right;
+}
+header .head-tools span,a{
+	color: #FFF;
+	font-size: 12px;
+	padding-right: 5px;
+	cursor: pointer;	
+}
+header .head-tools a{
+	border-left: 1px solid #FFF;
+	padding: 0 5px 0 15px;	
+}
+header .head-tools a{
+	text-decoration: none;
+}
+header .head-tools a img{
+	display: inline-block;	
+	height: 16px;
+	width: 16px;
+	padding-right: 2px;
+	border: none;
+	position: relative;
+	top: 5px;
+}
+article .left-aside{
+	/*border: 1px dashed red;	*/
+	height: 100%;
+	width: 200px;
+	float: left;
+	background-color: #ddd;
+}
+article .rigth-content{
+	overflow: hidden;		
+	width: auto;
+	height: auto;
+	background-color: #fff;
+}
+article .left-aside dt{
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 13px;
+	padding-left: 10px;
+	border-bottom: 1px solid #eee;
+	background-color: #ddd;
+}
+article .left-aside dt img{
+	position: relative;
+	top: 3px;
+	padding-right: 6px;
+}
+article .left-aside dd{
+	height: 20px;
+	line-height: 20px;
+	text-align: left;
+	font-size: 13px;
+	padding-left: 30px;
+	background-color: #eee;
+}
+article .left-aside dt:hover{
+	cursor: pointer;
+}
+article .left-aside dd:hover{
+	background-color: #fff;
+	cursor: pointer;
+}
+article .rigth-content .alter-password-frame{
+	 width:100%; 
+	 height:635px;
+	 display: none;
+}
