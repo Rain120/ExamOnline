@@ -166,8 +166,9 @@ router.post('/user/login', function (req, res) {
                                 if (loginResult) {
                                     console.log("loginResult==>" + typeof(loginResult) );
                                     responseData.message = '用户登录成功';
-                                    responseData.searchRegisterResult = {
-                                        username: searchRegisterResult[0].uname
+                                    responseData.LoginResultData = {
+                                        username: searchRegisterResult[0].uname,
+                                        usertype: searchLoginResult[0].utype
                                     };
                                     res.json(responseData);
                                 }
@@ -188,8 +189,9 @@ router.post('/user/login', function (req, res) {
                                     if (loginResult) {
                                         console.log("loginResult==>" + typeof(loginResult));
                                         responseData.message = '用户登录成功';
-                                        responseData.loginResult = {
-                                            username: searchRegisterResult[0].uname
+                                        responseData.LoginResultData = {
+                                            username: searchRegisterResult[0].uname,
+                                            usertype: searchLoginResult[0].utype
                                         };
                                         // 以json形式，把操作结果返回给前台页面
                                         res.json(responseData);

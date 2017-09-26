@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #dddddd;
+        }
+
+        header {
+            height: 50px;
+            width: 100%;
+            font-size: 14px;
+            font-family: 'Opens Sans', sans-serif;
+            background: #333;
+            color: #FFF;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover, a:active {
+            color: #c94e50;
+        }
+
+        a:link, a:visited {
+            color: #fff;
+        }
+
+        ul {
+            text-align: left;
+            display: inline;
+            margin: 0;
+            list-style: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        }
+
+        ul li {
+            height: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: -4px;
+            padding: 15px 20px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        ul li:hover {
+            background: #555;
+            color: #fff;
+        }
+
+        ul li ul {
+            padding: 0;
+            position: absolute;
+            margin-left: -20px;
+            top: 50px;
+            width: 180px;
+            box-shadow: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            display: none;
+        }
+
+        ul li ul li {
+            background: #555;
+            display: block;
+            color: #fff;
+            text-shadow: 0 -1px 0 #000;
+            cursor: pointer;
+        }
+
+        ul li ul li:hover {
+            background: #666;
+            color: #c94e50;
+        }
+
+        ul li:hover ul {
+            display: block;
+            opacity: 0.8;
+        }
+
+        .nav_title {
+            font-weight: 600;
+            font-size: 1.6em;
+            color: #FFFFFF;
+            float: left;
+            margin: 10px 100px;
+        }
+
+        .nav_div {
+            margin-right: 80px;
+            float: right;
+            border: none;
+        }
+
+        .add_subs_frame {
+            border: 2px solid #aaaaaa;
+            border-radius: 10px;
+            /*height: 560px;*/
+            width: 70%;
+            margin: 20px auto;
+            background-color: #FFFFFF;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 3px 3px 3px rgba(0, 10, 0, 0.3);
+        }
+
+        .add_subs_frame_header {
+            border: 1px solid #aaaaaa;
+            border-radius: 1px;
+            height: 60px;
+            width: 90%;
+            margin: 15px auto;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 3px 3px 3px rgba(0, 10, 0, 0.3);
+        }
+
+        .header_left {
+            width: 20%;
+            margin: 15px 0 0 100px;
+            float: left;
+        }
+
+        .header_left .subjs_type {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0 0 0 10px;
+        }
+
+        .header_right {
+            width: 100px;
+            height: 30px;
+            float: right;
+            margin: 15px 100px 0 0;
+        }
+
+        .header_right a {
+            width: 80px;
+            height: 20px;
+            border-image: none;
+            border-radius: 4px;
+            border-style: solid;
+            border-width: 1px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+            padding: 4px 12px;
+            text-align: center;
+            background-color: #006DCC;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+
+        textarea {
+            width: 90%;
+            margin: 10px 0 0 45px;
+        }
+        .add_subjs {
+            border: 1px solid #dddddd;
+            border-radius: 1px;
+            width: 90%;
+            margin: 10px auto;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 3px 3px 3px rgba(0, 10, 0, 0.3);
+        }
+        .subs_content {
+            border: 1px solid #dddddd;
+            border-radius: 1px;
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        .subj_result {
+            border: 1px solid #dddddd;
+            border-radius: 1px;
+            width: 90%;
+            margin: 10px auto;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 3px 3px 3px rgba(0, 10, 0, 0.3);
+        }
+    </style>
+    <script src="../public/js/jquery-3.2.1.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+<header>
+    <div class="nav_title">ExamOnline</div>
+    <div class="nav_div">
+        <ul class="user_nav">
+            <li>欢迎您，<span class="userInfo">admin</span>
+                <ul>
+                    <li><a href="#">个人主页</a></li>
+                    <li><a href="#">账号设置</a></li>
+                    <li><a href="#">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="add_subs_frame">
+    <div class="add_subs_frame_header">
+        <div class="header_left">
+            <select id="subjs_type" class="subjs_type" title="请选择添加题型" required>
+                <option value="选择题">选择题</option>
+                <option value="编程题">编程题</option>
+                <option value="解答题">解答题</option>
+            </select>
+        </div>
+        <div class="header_right">
+            <a href="#javascript:void(0)"><span>添加题目</span></a>
+        </div>
+    </div>
+    <div class="add_check_subs add_subjs">
+        <div class="check_subs_content subs_content">
+            <textarea rows="4" cols="140" name="sub_title">请在此处输入选择题...</textarea>
+            <textarea rows="2" cols="140" name="sub_option_A">请在此处选项A...</textarea>
+            <textarea rows="2" cols="140" name="sub_option_B">请在此处选项B...</textarea>
+            <textarea rows="2" cols="140" name="sub_option_C">请在此处选项C...</textarea>
+            <textarea rows="2" cols="140" name="sub_option_D">请在此处选项D...</textarea>
+        </div>
+        <div class="check_subj_result subj_result">
+            <textarea rows="2" cols="140" name="sub_result">请在选择题答案</textarea>
+        </div>
+    </div>
+    <div class="add_programme_subs add_subjs">
+        <div class="programme_subs_content subs_content">
+            <textarea rows="10" cols="140" name="sub_title">请在此处编程题...</textarea>
+        </div>
+        <div class="programme_subj_result subj_result">
+            <textarea rows="10" cols="140" name="sub_result">请在编程题答案</textarea>
+        </div>
+    </div>
+    <div class="add_fill_subs add_subjs">
+        <div class="fill_subs_content subs_content">
+            <textarea rows="4" cols="140" name="sub_title">请在此处输入填空题...</textarea>
+        </div>
+        <div class="fill_subj_result subj_result">
+            <textarea rows="4" cols="140" name="sub_result">请在解答题答案</textarea>
+        </div>
+    </div>
+</div>
+</body>
+</html>

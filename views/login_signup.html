@@ -299,9 +299,11 @@
                             alert(result.code);
                             setTimeout(function(){
                                 $('.login_div').css('display','none');
-                                window.location.href = 'http://localhost:63342/ExamOnline/views/index.html';
-//                                window.open('http://localhost:63342/ExamOnline/views/index.html');
-//                                window.close();
+                                if (result.LoginResultData.usertype == '学生') {
+                                    window.location.href = 'http://localhost:63342/ExamOnline/views/index.html';
+                                } else {
+                                    window.location.href = 'http://localhost:63342/ExamOnline/views/adminPage.html';
+                                }
                             },1000);
                         }
                     },
