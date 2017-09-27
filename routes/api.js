@@ -104,6 +104,12 @@ router.post('/user/register', function (req, res) {
         });
     });
 });
+/***
+ * 用户登录
+ * 1、判断用户是否存在(user表中)
+ * 2、判断用户的登录状态(0用户未登录，1用户登录)
+ * 3、用户登录后改变用户登录表中的状态，并跳转到相应的界面
+ */
 router.post('/user/login', function (req, res) {
     console.log("router.post('/user/login'====>");
     util.log(util.inspect(req.method));
@@ -208,5 +214,15 @@ router.post('/user/login', function (req, res) {
     //// 释放连接
     //connection.release();
     //console.log('connection.release()');
+});
+/**
+ * 管理员添加题目
+ * 1、判断添加题型，并加入相应的题库表，置相应的状态
+ * 2、选择题
+ * 3、编程题
+ * 4、解答题
+ */
+router.post('/admin/addSubs', function(req, res) {
+
 });
 module.exports = router;

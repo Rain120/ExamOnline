@@ -281,7 +281,6 @@
             var cancle_btn = $('#cancle_btn');
             console.log($('#user_type').val());
             login_btn.click(function(){
-//                window.location.href = "index.html";
                 $.ajax({
                     type: 'post',
                     url: '/api/user/login',
@@ -299,7 +298,7 @@
                             alert(result.code);
                             setTimeout(function(){
                                 $('.login_div').css('display','none');
-                                if (result.LoginResultData.usertype == '学生') {
+                                if (result.LoginResultData.usertype == '用户') {
                                     window.location.href = 'http://localhost:63342/ExamOnline/views/index.html';
                                 } else {
                                     window.location.href = 'http://localhost:63342/ExamOnline/views/adminPage.html';

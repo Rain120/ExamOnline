@@ -127,12 +127,17 @@
 
         .header_left {
             width: 20%;
-            margin: 15px 0 0 100px;
+            margin: 15px 0 0 40px;
+            float: left;
+        }
+
+        .header_middle {
+            margin: 15px 0 0 60px;
             float: left;
         }
 
         .header_left .subjs_type {
-            width: 100px;
+            width: 170px;
             height: 30px;
             line-height: 30px;
             text-align: center;
@@ -148,7 +153,7 @@
             margin: 15px 100px 0 0;
         }
 
-        .header_right a {
+        .btn_css {
             width: 80px;
             height: 20px;
             border-image: none;
@@ -168,11 +173,11 @@
             text-decoration: none;
         }
 
-
         textarea {
             width: 90%;
             margin: 10px 0 0 45px;
         }
+
         .add_subjs {
             border: 1px solid #dddddd;
             border-radius: 1px;
@@ -182,6 +187,7 @@
             -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
             -webkit-box-shadow: 3px 3px 3px rgba(0, 10, 0, 0.3);
         }
+
         .subs_content {
             border: 1px solid #dddddd;
             border-radius: 1px;
@@ -201,7 +207,106 @@
     </style>
     <script src="../public/js/jquery-3.2.1.min.js"></script>
     <script>
+        $(function () {
+            $(".add_check_subs").hide();
+            $(".add_programme_subs").hide();
+            $(".add_fill_subs").hide();
+            var add_subjs_btn = $(".add_subjs_btn");
+            var con_btn = $(".con_btn");
+            var subjs_case;
+            con_btn.click(function () {
+                subjs_case = subjects_type();
+            });
+            add_subjs_btn.click(function () {
+                switch (subjs_case) {
+                    case 1:
+                        $.ajax({
+                            type: 'post',
+                            url: '/api/admin/addSubs',
+                            data: {
+                                title_type: "选择题",
+                                check_title: $('.check_subs_content .check_title').val(),
+                                sub_options_A: $('.check_subs_content .sub_options_A').val(),
+                                sub_options_B: $('.check_subs_content .sub_options_B').val(),
+                                sub_options_C: $('.check_subs_content .sub_options_C').val(),
+                                sub_options_D: $('.check_subs_content .sub_options_D').val(),
+                                check_result: $('.check_result .sub_result').val()
+                            },
+                            dateType: 'json',
+                            async: false,
+                            cache: false,
+                            timeout: 5000,
+                            success: function (result) {
 
+                            }, error: function (jqXHR, textStatus, errorThrown) {
+                                console.log('error function:' + textStatus + "\n" + errorThrown);
+                            }
+                        });
+                        break;
+                    case 2:
+                        $.ajax({
+                            type: 'post',
+                            url: '/api/admin/addSubs',
+                            data: {
+                                title_type: "编程题",
+                                programme_title: $('.programme_subs_content .programme_title').val(),
+                                programme_result: $('.programme_result .programme_result').val()
+                            },
+                            dateType: 'json',
+                            async: false,
+                            cache: false,
+                            timeout: 5000,
+                            success: function (result) {
+
+                            }, error: function (jqXHR, textStatus, errorThrown) {
+                                console.log('error function:' + textStatus + "\n" + errorThrown);
+                            }
+                        });
+                        break;
+                    case 3:
+                        $.ajax({
+                            title_type: "解答题",
+                            type: 'post',
+                            url: '/api/admin/addSubs',
+                            data: {
+                                fill_title: $('.fill_subs_content .fill_title').val(),
+                                fill_result: $('.fill_result .fill_result').val()
+                            },
+                            dateType: 'json',
+                            async: false,
+                            cache: false,
+                            timeout: 5000,
+                            success: function (result) {
+
+                            }, error: function (jqXHR, textStatus, errorThrown) {
+                                console.log('error function:' + textStatus + "\n" + errorThrown);
+                            }
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+        function subjects_type() {
+            var subjs_type = $(".subjs_type").val();
+            if (subjs_type == '选择题') {
+                $(".add_check_subs").show();
+                $(".add_programme_subs").hide();
+                $(".add_fill_subs").hide();
+                return 1;
+            } else if (subjs_type == '编程题') {
+                $(".add_check_subs").hide();
+                $(".add_programme_subs").show();
+                $(".add_fill_subs").hide();
+                return 2;
+            } else if (subjs_type == '解答题') {
+                $(".add_check_subs").hide();
+                $(".add_programme_subs").hide();
+                $(".add_fill_subs").show();
+                return 3;
+            }
+        }
     </script>
 </head>
 <body>
@@ -223,41 +328,45 @@
     <div class="add_subs_frame_header">
         <div class="header_left">
             <select id="subjs_type" class="subjs_type" title="请选择添加题型" required>
+                <option value="">请选择添加题型</option>
                 <option value="选择题">选择题</option>
                 <option value="编程题">编程题</option>
                 <option value="解答题">解答题</option>
             </select>
         </div>
+        <div class="header_middle">
+            <a class="con_btn btn_css" href="#"><span>确认题型</span></a>
+        </div>
         <div class="header_right">
-            <a href="#javascript:void(0)"><span>添加题目</span></a>
+            <a class="add_subjs_btn btn_css" href="#"><span>添加题目</span></a>
         </div>
     </div>
     <div class="add_check_subs add_subjs">
         <div class="check_subs_content subs_content">
-            <textarea rows="4" cols="140" name="sub_title">请在此处输入选择题...</textarea>
-            <textarea rows="2" cols="140" name="sub_option_A">请在此处选项A...</textarea>
-            <textarea rows="2" cols="140" name="sub_option_B">请在此处选项B...</textarea>
-            <textarea rows="2" cols="140" name="sub_option_C">请在此处选项C...</textarea>
-            <textarea rows="2" cols="140" name="sub_option_D">请在此处选项D...</textarea>
+            <textarea rows="4" cols="140" name="sub_title" class="check_title">请在此处输入选择题...</textarea>
+            <textarea rows="2" cols="140" name="sub_options_A" class="sub_options_A">请在此处选项A...</textarea>
+            <textarea rows="2" cols="140" name="sub_options_B" class="sub_options_B">请在此处选项B...</textarea>
+            <textarea rows="2" cols="140" name="sub_options_C" class="sub_options_C">请在此处选项C...</textarea>
+            <textarea rows="2" cols="140" name="sub_options_D" class="sub_options_D">请在此处选项D...</textarea>
         </div>
         <div class="check_subj_result subj_result">
-            <textarea rows="2" cols="140" name="sub_result">请在选择题答案</textarea>
+            <textarea rows="2" cols="140" name="sub_result" class="check_result">请在选择题答案</textarea>
         </div>
     </div>
     <div class="add_programme_subs add_subjs">
         <div class="programme_subs_content subs_content">
-            <textarea rows="10" cols="140" name="sub_title">请在此处编程题...</textarea>
+            <textarea rows="10" cols="140" name="sub_title" class="programme_title">请在此处编程题...</textarea>
         </div>
         <div class="programme_subj_result subj_result">
-            <textarea rows="10" cols="140" name="sub_result">请在编程题答案</textarea>
+            <textarea rows="10" cols="140" name="sub_result" class="programme_result">请在编程题答案</textarea>
         </div>
     </div>
     <div class="add_fill_subs add_subjs">
         <div class="fill_subs_content subs_content">
-            <textarea rows="4" cols="140" name="sub_title">请在此处输入填空题...</textarea>
+            <textarea rows="4" cols="140" name="sub_title" class="fill_title">请在此处输入填空题...</textarea>
         </div>
         <div class="fill_subj_result subj_result">
-            <textarea rows="4" cols="140" name="sub_result">请在解答题答案</textarea>
+            <textarea rows="4" cols="140" name="sub_result" class="fill_result">请在解答题答案</textarea>
         </div>
     </div>
 </div>
