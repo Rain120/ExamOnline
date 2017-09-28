@@ -20,7 +20,7 @@
             width: 600px;
             height: 400px;
             background-color: #fff;
-            margin: 150px auto;
+            margin: 120px auto;
         }
 
         .exam_type {
@@ -68,6 +68,7 @@
         }
 
         .exam_show_content {
+            display: none;
             height: 600px;
             width: 1000px;
             margin: 20px auto;
@@ -92,6 +93,27 @@
             float: left;
             margin-right: 20px;
             padding-left: 50px;
+        }
+
+        .submit_btn {
+            float: right;
+            margin-right: 100px;
+        }
+
+        .submit_btn a {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            width: 160px;
+            margin: 12px 40px 0 0;
+            float: right;
+            font-size: 0.9em;
+            font-weight: bold;
+            background-color: #2ad080;
+            box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.6);
+            -moz-box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.6);
+            -webkit-box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.6);
         }
 
         .timeShow {
@@ -144,7 +166,7 @@
             margin-top: 10px;
         }
 
-        .sub_option a .option_result {
+        .sub_option .option_result {
             word-wrap: break-word;
             word-break: break-all;
         }
@@ -255,11 +277,12 @@
             -webkit-box-shadow: 3px 3px 3px rgba(0, 10, 0, 0.3);
         }
     </style>
-    <script src="../public/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../public/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script type="javascript"
+            src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script type="javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="javascript" src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
     <script>
         $(function () {
             $('.circle').each(function (index, el) {
@@ -300,10 +323,12 @@
             var prev_sub = $('.prev_sub');
             var next_sub = $('.next_sub');
             var submit_exam_btn = $('.submit_exam_btn');
+            var exam_show_content = $(".exam_show_content");
 
             check_btn.click(function () {
                 $('#codrops-header').hide();
                 $('#exam_content_style').hide();
+                exam_show_content.show();
                 exam_show_header.show();
                 $('#subject1').css('backgroundColor', 'green');
                 timer(intDiff);
@@ -311,6 +336,19 @@
                 check_btn.html("已提交答案");
                 check_btn.css("backgroundColor", "#aaa");
                 changeSubj();
+                $.ajax({
+                    url: 'http://127.0.0.1:3000/api/exam/stuExam',
+                    type: 'GET',
+                    async: false,
+                    cache: false,
+                    timeout: 5000,
+                    success: function (result) {
+                        console.log(result.data.check[0]);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log('error function:' + textStatus + "\n" + errorThrown);
+                    }
+                });
             });
             programme_btn.click(function () {
                 $('#codrops-header').hide();
@@ -323,6 +361,7 @@
             submit_exam_btn.click(function () {
                 if (confirm('正在考试ing，确定提交')) {
                     $('#exam_content_style').show();
+                    exam_show_content.hide();
                     return true;
                 } else {
                     return false;
@@ -347,7 +386,7 @@
                     nextCount--;
                     alert("Prev" + nextCount);
                     $('#subject' + (nextCount + 1)).css('backgroundColor', 'green');
-                    $('#subject' + (nextCount + 2) ).css('backgroundColor', '#aaa');
+                    $('#subject' + (nextCount + 2)).css('backgroundColor', '#aaa');
                     $('.title_content>p').text('上一题');
                     if (nextCount < 0) {
                         $('#subject' + nextCount).css('backgroundColor', 'green');
@@ -392,6 +431,9 @@
 </header>
 <div class="exam_show_header">
     <div class="exam_show_header_title">ExamOnline</div><!--/exam_show_header_title--->
+    <div class="submit_btn">
+        <a href="#"><span>提交试卷</span></a>
+    </div>
     <div class="timeShow">
         <span>考试剩余时间:</span>
         <span class="timeLeft"><strong id="hour_show">01</strong>:<strong id="minute_show">40</strong>:<strong

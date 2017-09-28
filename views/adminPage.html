@@ -222,15 +222,14 @@
                     case 1:
                         $.ajax({
                             type: 'post',
-                            url: '/api/admin/addSubs',
+                            url: 'http://127.0.0.1:3000/api/manager/addCheck',
                             data: {
-                                title_type: "选择题",
                                 check_title: $('.check_subs_content .check_title').val(),
                                 sub_options_A: $('.check_subs_content .sub_options_A').val(),
                                 sub_options_B: $('.check_subs_content .sub_options_B').val(),
                                 sub_options_C: $('.check_subs_content .sub_options_C').val(),
                                 sub_options_D: $('.check_subs_content .sub_options_D').val(),
-                                check_result: $('.check_result .sub_result').val()
+                                check_result: $('.check_subj_result .check_result').val()
                             },
                             dateType: 'json',
                             async: false,
@@ -238,7 +237,8 @@
                             timeout: 5000,
                             success: function (result) {
 
-                            }, error: function (jqXHR, textStatus, errorThrown) {
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
                                 console.log('error function:' + textStatus + "\n" + errorThrown);
                             }
                         });
@@ -246,11 +246,10 @@
                     case 2:
                         $.ajax({
                             type: 'post',
-                            url: '/api/admin/addSubs',
+                            url: 'http://127.0.0.1:3000/api/manager/addProgramme',
                             data: {
-                                title_type: "编程题",
                                 programme_title: $('.programme_subs_content .programme_title').val(),
-                                programme_result: $('.programme_result .programme_result').val()
+                                programme_result: $('.programme_subj_result .programme_result').val()
                             },
                             dateType: 'json',
                             async: false,
@@ -258,19 +257,19 @@
                             timeout: 5000,
                             success: function (result) {
 
-                            }, error: function (jqXHR, textStatus, errorThrown) {
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
                                 console.log('error function:' + textStatus + "\n" + errorThrown);
                             }
                         });
                         break;
                     case 3:
                         $.ajax({
-                            title_type: "解答题",
                             type: 'post',
-                            url: '/api/admin/addSubs',
+                            url: 'http://127.0.0.1:3000/api/manager/addFill',
                             data: {
                                 fill_title: $('.fill_subs_content .fill_title').val(),
-                                fill_result: $('.fill_result .fill_result').val()
+                                fill_result: $('.fill_subj_result .fill_result').val()
                             },
                             dateType: 'json',
                             async: false,
@@ -278,7 +277,8 @@
                             timeout: 5000,
                             success: function (result) {
 
-                            }, error: function (jqXHR, textStatus, errorThrown) {
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
                                 console.log('error function:' + textStatus + "\n" + errorThrown);
                             }
                         });
@@ -343,30 +343,30 @@
     </div>
     <div class="add_check_subs add_subjs">
         <div class="check_subs_content subs_content">
-            <textarea rows="4" cols="140" name="sub_title" class="check_title">请在此处输入选择题...</textarea>
-            <textarea rows="2" cols="140" name="sub_options_A" class="sub_options_A">请在此处选项A...</textarea>
-            <textarea rows="2" cols="140" name="sub_options_B" class="sub_options_B">请在此处选项B...</textarea>
-            <textarea rows="2" cols="140" name="sub_options_C" class="sub_options_C">请在此处选项C...</textarea>
-            <textarea rows="2" cols="140" name="sub_options_D" class="sub_options_D">请在此处选项D...</textarea>
+            <span>选择题题目:</span><textarea rows="4" cols="140" name="sub_title" class="check_title"></textarea>
+            <span>选项A:</span><textarea rows="2" cols="140" name="sub_options_A" class="sub_options_A"></textarea>
+            <span>选项B:</span><textarea rows="2" cols="140" name="sub_options_B" class="sub_options_B"></textarea>
+            <span>选项C:</span><textarea rows="2" cols="140" name="sub_options_C" class="sub_options_C"></textarea>
+            <span>选项D:</span><textarea rows="2" cols="140" name="sub_options_D" class="sub_options_D"></textarea>
         </div>
         <div class="check_subj_result subj_result">
-            <textarea rows="2" cols="140" name="sub_result" class="check_result">请在选择题答案</textarea>
+            <span>选择题答案:</span><textarea rows="2" cols="140" name="sub_result" class="check_result"></textarea>
         </div>
     </div>
     <div class="add_programme_subs add_subjs">
         <div class="programme_subs_content subs_content">
-            <textarea rows="10" cols="140" name="sub_title" class="programme_title">请在此处编程题...</textarea>
+            <span>编程题题目:</span><textarea rows="10" cols="140" name="sub_title" class="programme_title"></textarea>
         </div>
         <div class="programme_subj_result subj_result">
-            <textarea rows="10" cols="140" name="sub_result" class="programme_result">请在编程题答案</textarea>
+            <span>编程题答案：</span><textarea rows="10" cols="140" name="sub_result" class="programme_result"></textarea>
         </div>
     </div>
     <div class="add_fill_subs add_subjs">
         <div class="fill_subs_content subs_content">
-            <textarea rows="4" cols="140" name="sub_title" class="fill_title">请在此处输入填空题...</textarea>
+            <span>解答题题目:</span><textarea rows="4" cols="140" name="sub_title" class="fill_title"></textarea>
         </div>
         <div class="fill_subj_result subj_result">
-            <textarea rows="4" cols="140" name="sub_result" class="fill_result">请在解答题答案</textarea>
+            <span>解答题答案：</span><textarea rows="4" cols="140" name="sub_result" class="fill_result"></textarea>
         </div>
     </div>
 </div>

@@ -50,9 +50,11 @@ swig.setDefaults({cache:false});
  * 该对象将包含键值对，其中值可以是字符串或数组（当extended为 false）或任何类型（何时extended为true）。
  */
 app.use(bodyParser.urlencoded({extended: true}));
+
 /**
  * 根据不同的功能划分模块
  */
+app.use('/manager', require('./manager'));
 app.use('/admin', require('./admin'));
 app.use('/api', require('./api'));
 app.use('/', require('./main'));

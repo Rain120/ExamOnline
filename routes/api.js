@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var util = require('util');
+var silly_datetime = require('silly-datetime');
 /***
  * 加载mysql数据库模块
  * 导入数据库
@@ -9,6 +10,7 @@ var mysql = require('mysql');
 var dbConfig = require('../database/DBConfig');
 var userSignupSQL = require('../database/userSignupSQL');
 var userLoginSQL = require('../database/userLoginSQL');
+var addCheckSQL = require('../database/addCheckSubjectsSQL');
 /**
  * 使用DBConfig.js的配置信息创建一个MySQL连接池
  */
@@ -157,7 +159,7 @@ router.post('/user/login', function (req, res) {
                     }
                     if (searchLoginResult[0].count >= 1) {
                         console.log('用户已存在');
-                        if(searchLoginResult[0].state == 1) {
+                        if (searchLoginResult[0].state == 1) {
                             responseData.code = 7;
                             responseData.message = '用户已经登录';
                             // 以json形式，把操作结果返回给前台页面
@@ -170,7 +172,7 @@ router.post('/user/login', function (req, res) {
                                     return;
                                 }
                                 if (loginResult) {
-                                    console.log("loginResult==>" + typeof(loginResult) );
+                                    console.log("loginResult==>" + typeof(loginResult));
                                     responseData.message = '用户登录成功';
                                     responseData.LoginResultData = {
                                         username: searchRegisterResult[0].uname,
@@ -217,12 +219,137 @@ router.post('/user/login', function (req, res) {
 });
 /**
  * 管理员添加题目
- * 1、判断添加题型，并加入相应的题库表，置相应的状态
- * 2、选择题
- * 3、编程题
- * 4、解答题
+ * 判断添加题型，并加入相应的题库表，置相应的状态
+ * 1、选择题
+ * 2、编程题
+ * 3、解答题
  */
-router.post('/admin/addSubs', function(req, res) {
+/***
+ * 1、选择题
+ */
+router.post('/manager/addCheck', function (req, res) {
+    var nowTime = silly_datetime.format(new Date(), 'YYYY-MM-DD HH:mm:ss');
+    //var nowTime = new Date( Date.parse(timeString.replace("/-/g", "/")));
+    console.log(typeof(nowTime));
+    console.log(nowTime);
+    var check_title = req.body.check_title;
+    var sub_options_A = req.body.sub_options_A;
+    var sub_options_B = req.body.sub_options_B;
+    var sub_options_C = req.body.sub_options_C;
+    var sub_options_D = req.body.sub_options_D;
+    var check_result = req.body.check_result;
+    console.log(req.body);
+    if (check_title == '') {
+        responseData.code = 10;
+        responseData.message = '题目为空';
+        res.json(responseData);
+        return;
+    }
+    if (sub_options_A == '') {
+        responseData.code = 11;
+        responseData.message = '选项A为空';
+        res.json(responseData);
+        return;
+    }
+    if (sub_options_B == '') {
+        responseData.code = 12;
+        responseData.message = '选项B为空';
+        res.json(responseData);
+        return;
+    }
+    if (sub_options_C == '') {
+        responseData.code = 13;
+        responseData.message = '选项C为空';
+        res.json(responseData);
+        return;
+    }
+    if (sub_options_D == '') {
+        responseData.code = 14;
+        responseData.message = '选项D为空';
+        res.json(responseData);
+        return;
+    }
+    if (check_result == '') {
+        responseData.code = 15;
+        responseData.message = '选择题答案为空';
+        res.json(responseData);
+        return;
+    }
+    pool.getConnection(function (err, connection) {
+        connection.query(addCheckSQL.getSubExist, check_title, function (err, searchSubResult) {
+            if (err) {
+                console.log('[SELECT ERROR] - ', err.message);
+                return;
+            }
+            if (searchSubResult[0].count >= 1) {
+                responseData.code = 9;
+                responseData.message = '题目已存在';
+                res.json(responseData);
+            }
+            else {
+                connection.query(addCheckSQL.insert, [check_title, sub_options_A, sub_options_B, sub_options_C, sub_options_D, check_result, 0], function (err, insertResult) {
+                    if (err) {
+                        console.log('[INSERT ERROR] - ', err.message);
+                        return;
+                    }
+                    if (insertResult) {
+                        responseData.message = '添加题目成功';
+                        res.json(responseData);
+                    }
+                    console.log('addCheckSQL.insert==>responseData.code=' + responseData.code);
+                });
+            }
+        });
+    });
+});
 
+/**
+ * 查询题目，并返回JSON到前台页面
+ */
+router.get('/exam/stuExam', function (req, res, next) {
+    pool.getConnection(function (err, connection) {
+        connection.query(addCheckSQL.getSubNums, 0, function (err, searchSubCountResult) {
+            if (err) {
+                console.log('[SELECT ERROR] - ', err.message);
+                return;
+            }
+            if (searchSubCountResult[0].nums.valueOf() >= 8) {
+                connection.query(addCheckSQL.selectSub, function (err, selectSubResult) {
+                    if (selectSubResult) {
+                        responseData.message = '取题成功';
+                        responseData.subData = {
+                            check: [
+                                {
+                                    check_id_1: selectSubResult[0].id,
+                                    check_title_1: selectSubResult[0].check_title,
+                                    check_options_A_1: selectSubResult[0].check_options_A,
+                                    check_options_B_1: selectSubResult[0].check_options_B,
+                                    check_options_C_1: selectSubResult[0].check_options_C,
+                                    check_options_D_1: selectSubResult[0].check_options_D,
+                                    check_result_1: selectSubResult[0].check_result
+                                },
+                                {
+                                    check_id_1_2: selectSubResult[1].id,
+                                    check_title_2: selectSubResult[1].check_title,
+                                    check_options_A_2: selectSubResult[1].check_options_A,
+                                    check_options_B_2: selectSubResult[1].check_options_B,
+                                    check_options_C_2: selectSubResult[1].check_options_C,
+                                    check_options_D_2: selectSubResult[1].check_options_D,
+                                    check_result_2: selectSubResult[1].check_result
+                                }
+                            ]
+                        };
+                        console.log(responseData.subData);
+                        res.json(responseData);
+                    }
+                });
+            }
+            else {
+                responseData.code = 16;
+                responseData.message = '题目数量不足';
+                res.json(responseData);
+            }
+        });
+    });
 });
 module.exports = router;
