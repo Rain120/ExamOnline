@@ -100,7 +100,7 @@
             margin-right: 100px;
         }
 
-        .submit_btn a {
+        #submit_btn a {
             display: block;
             height: 30px;
             line-height: 30px;
@@ -154,6 +154,7 @@
         }
 
         .subjs_option {
+            display: none;
             height: 55%;
         }
 
@@ -286,16 +287,6 @@
     <script type="javascript" src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
     <script>
         $(function () {
-            $('.circle').each(function (index, el) {
-                var num = $(this).find('span').text() * 3.6;
-                if (num <= 180) {
-                    $(this).find('.right').css('transform', "rotate(" + num + "deg)");
-                } else {
-                    $(this).find('.right').css('transform', "rotate(180deg)");
-                    $(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
-                }
-            });
-
             var intDiff = parseInt(100 * 60);//倒计时总秒数量
             function timer(intDiff) {
                 window.setInterval(function () {
@@ -325,14 +316,21 @@
             var next_sub = $('.next_sub');
             var submit_exam_btn = $('.submit_exam_btn');
             var exam_show_content = $(".exam_show_content");
-
+            var submit_btn = $(".submit_btn");
             var exam_subject_title = $('.exam_subject_title');
             var p1 = $(".p1");
             var p2 = $(".p2");
             var p3 = $(".p3");
             var p4 = $(".p4");
-            var examJSON;
-
+            var count = 0;
+            var examCheck;
+            /**题目信息**/
+            var selectResult = [];
+            /**你的答案集合**/
+            /**用户完成题数目**/
+            var rightResult = 0;
+            var finishedCount = 1;
+            var val = 0;
             check_btn.click(function () {
                 $('#codrops-header').hide();
                 $('#exam_content_style').hide();
@@ -353,22 +351,20 @@
                     success: function (result) {
                         console.log(result.code);
                         if (!result.code) {
-                            examJSON = result.subData;
+                            examCheck = result.subData;
                             console.log(result.subData.check[0].title_num);
                             exam_subject_title.html(result.subData.check[0].title_num + "、" + result.subData.check[0].check_title);
                             p1.html(result.subData.check[0].check_options_A);
                             p2.html(result.subData.check[0].check_options_B);
                             p3.html(result.subData.check[0].check_options_C);
                             p4.html(result.subData.check[0].check_options_D);
-                            var item = $(":radio:checked").val();
-                            alert(typeof (item) );
                         }
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         console.log('error function:' + textStatus + "\n" + errorThrown);
                     }
                 });
-                changeSubj(examJSON);
+                changeSubj(examCheck);
             });
             programme_btn.click(function () {
                 $('#codrops-header').hide();
@@ -380,6 +376,9 @@
             });
             submit_exam_btn.click(function () {
                 if (confirm('正在考试ing，确定提交')) {
+                    for (var i = 0; i < selectResult.length; i++) {
+                        console.log("selectResult===>" + i + ":" + selectResult[i]);
+                    }
                     $('#exam_content_style').show();
                     exam_show_content.hide();
                     return true;
@@ -387,42 +386,90 @@
                     return false;
                 }
             });
-            function changeSubj(examJSON) {
+            submit_btn.click(function () {
+                if (confirm('正在考试ing，确定提交')) {
+                    for (var i = 0; i < selectResult.length; i++) {
+                        console.log(selectResult[i] === examCheck.check[i].check_result);
+                        if( selectResult[i] === examCheck.check[i].check_result ) {
+                            rightResult++;
+                        }
+                    }
+                    alert("你的得分是：" + rightResult * 5);
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            function changeSubj(examCheck) {
                 var nextCount = 0;
                 var prevCount = 0;
+                $(".subjs_option1").show();
+                $(":radio").click(function (){
+                    alert($(this).val());
+                    selectResult.push($(this).val());
+                    val = parseInt(finishedCount / 8 * 100);
+                    console.log("parseInt(finishedCount / 8 * 100)===>" + finishedCount +" ==" + val);
+
+                    $("#mask_span").text( val );
+
+                    $('.circle').each(function (index, el) {
+                        alert("$(this).find('#mask_span').text()==>" + $(this).find('#mask_span').text());
+//                        var num = $(this).find('#mask_span').text() * 3.6;
+                        var num = $(this).find('#mask_span').text() * 3.6;
+                        if (num <= 180) {
+                            $(this).find('.right').css('transform', "rotate(" + num + "deg)");
+                        } else {
+                            $(this).find('.right').css('transform', "rotate(180deg)");
+                            $(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
+                        }
+                    });
+                    console.log("selectResult===>" + nextCount + ":" + selectResult[count]);
+                });
                 next_sub.click(function () {
+                    finishedCount++;
                     prevCount++;
-                    console.log(examJSON.check[prevCount].title_num);
-                    console.log("Next" + prevCount);
-                    exam_subject_title.html(examJSON.check[prevCount].title_num + "、" + examJSON.check[prevCount].check_title);
-                    p1.html(examJSON.check[prevCount].check_options_A);
-                    p2.html(examJSON.check[prevCount].check_options_B);
-                    p3.html(examJSON.check[prevCount].check_options_C);
-                    p4.html(examJSON.check[prevCount].check_options_D);
+                    console.log(examCheck.check[prevCount].title_num);
+                    console.log("Next--" + prevCount);
+                    $(".subjs_option" + (prevCount - 1)).hide();
+                    $(".subjs_option" + prevCount).show();
+                    exam_subject_title.html(examCheck.check[prevCount].title_num + "、" + examCheck.check[prevCount].check_title);
+                    p1.html(examCheck.check[prevCount].check_options_A);
+                    p2.html(examCheck.check[prevCount].check_options_B);
+                    p3.html(examCheck.check[prevCount].check_options_C);
+                    p4.html(examCheck.check[prevCount].check_options_D);
                     $('#subject' + prevCount).css('backgroundColor', '#aaa');
                     $('#subject' + (prevCount + 1)).css('backgroundColor', 'green');
                     if (prevCount > 8) {
+                        $(".subjs_option" + (prevCount - 1)).hide();
+                        $(".subjs_option" + prevCount).show();
                         $('#subject' + prevCount).css('backgroundColor', 'green');
                         next_sub.unbind("click");
                     }
                     nextCount = prevCount;
+                    count = nextCount;
                 });
                 prev_sub.click(function () {
                     nextCount--;
-                    console.log(examJSON.check[nextCount].title_num);
-                    console.log("Prev" + nextCount);
-                    exam_subject_title.html(examJSON.check[nextCount].title_num + "、" + examJSON.check[nextCount].check_title);
-                    p1.html(examJSON.check[nextCount].check_options_A);
-                    p2.html(examJSON.check[nextCount].check_options_B);
-                    p3.html(examJSON.check[nextCount].check_options_C);
-                    p4.html(examJSON.check[nextCount].check_options_D);
-                    $('#subject' + (nextCount + 1)).css('backgroundColor', 'green');
-                    $('#subject' + (nextCount + 2)).css('backgroundColor', '#aaa');
+                    console.log(examCheck.check[nextCount].title_num);
+                    console.log("Prev--" + nextCount);
                     if (nextCount < 0) {
+                        $(".subjs_option" + nextCount).show();
+                        $(".subjs_option" + nextCount - 1).hide();
                         $('#subject' + nextCount).css('backgroundColor', 'green');
                         prev_sub.unbind("click");
+                        return;
                     }
+                    $(".subjs_option" + (nextCount + 1)).hide();
+                    $(".subjs_option" + nextCount).show();
+                    exam_subject_title.html(examCheck.check[nextCount].title_num + "、" + examCheck.check[nextCount].check_title);
+                    p1.html(examCheck.check[nextCount].check_options_A);
+                    p2.html(examCheck.check[nextCount].check_options_B);
+                    p3.html(examCheck.check[nextCount].check_options_C);
+                    p4.html(examCheck.check[nextCount].check_options_D);
+                    $('#subject' + (nextCount + 1)).css('backgroundColor', 'green');
+                    $('#subject' + (nextCount + 2)).css('backgroundColor', '#aaa');
                     prevCount = nextCount;
+                    count = prevCount;
                 });
             }
         });
@@ -461,8 +508,8 @@
 </header>
 <div class="exam_show_header">
     <div class="exam_show_header_title">ExamOnline</div><!--/exam_show_header_title--->
-    <div class="submit_btn">
-        <a href="#"><span>提交试卷</span></a>
+    <div id="submit_btn">
+        <a href="#" class="submit_btn"><span>提交试卷</span></a>
     </div>
     <div class="timeShow">
         <span>考试剩余时间:</span>
@@ -511,18 +558,148 @@
                 <div class="title_content">
                     <p class="exam_subject_title"></p>
                 </div>
-                <div class="subjs_option">
+                <div class="subjs_option subjs_option1">
                     <a class="sub_option" href="javascript:void(0);">
-                        <input type="radio" name="check" value="A"><span>A、</span><span class="option_result p1"></span>
+                        <input type="radio" name="check1" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
                     </a>
                     <a class="sub_option" href="javascript:void(0);">
-                        <input type="radio" name="check" value="B"><span>B、</span><span class="option_result p2"></span>
+                        <input type="radio" name="check1" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
                     </a>
                     <a class="sub_option" href="javascript:void(0);">
-                        <input type="radio" name="check" value="C"><span>C、</span><span class="option_result p3"></span>
+                        <input type="radio" name="check1" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
                     </a>
                     <a class="sub_option" href="javascript:void(0);">
-                        <input type="radio" name="check" value="D"><span>D、</span><span class="option_result p4"></span>
+                        <input type="radio" name="check1" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
+                    </a>
+                </div><!--subjs_option-->
+                <div class="subjs_option subjs_option2">
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check2" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check2" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check2" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check2" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
+                    </a>
+                </div><!--subjs_option-->
+                <div class="subjs_option subjs_option3">
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check3" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check3" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check3" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check3" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
+                    </a>
+                </div><!--subjs_option-->
+                <div class="subjs_option subjs_option4">
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check4" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check4" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check4" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check4" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
+                    </a>
+                </div><!--subjs_option-->
+                <div class="subjs_option subjs_option5">
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check5" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check5" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check5" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check5" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
+                    </a>
+                </div><!--subjs_option-->
+                <div class="subjs_option subjs_option6">
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check6" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check6" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check6" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check6" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
+                    </a>
+                </div><!--subjs_option-->
+                <div class="subjs_option subjs_option7">
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check7" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check7" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check7" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check7" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
+                    </a>
+                </div><!--subjs_option-->
+                <div class="subjs_option subjs_option8">
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check8" value="A"><span>A、</span><span
+                            class="option_result p1"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check8" value="B"><span>B、</span><span
+                            class="option_result p2"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check8" value="C"><span>C、</span><span
+                            class="option_result p3"></span>
+                    </a>
+                    <a class="sub_option" href="javascript:void(0);">
+                        <input type="radio" name="check8" value="D"><span>D、</span><span
+                            class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
             </div>
@@ -540,7 +717,7 @@
                 <div class="pie_right">
                     <div class="right"></div>
                 </div>
-                <div class="mask"><span>80</span>%</div>
+                <div class="mask"><span id="mask_span">0</span>%</div>
             </div>
         </div><!--/exam_completed--->
         <div class="exam_subject_number">
