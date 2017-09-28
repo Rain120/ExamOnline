@@ -306,7 +306,7 @@ router.post('/manager/addCheck', function (req, res) {
 /**
  * 查询题目，并返回JSON到前台页面
  */
-router.get('/exam/stuExam', function (req, res, next) {
+router.get('/exam', function (req, res) {
     pool.getConnection(function (err, connection) {
         connection.query(addCheckSQL.getSubNums, 0, function (err, searchSubCountResult) {
             if (err) {
@@ -316,30 +316,96 @@ router.get('/exam/stuExam', function (req, res, next) {
             if (searchSubCountResult[0].nums.valueOf() >= 8) {
                 connection.query(addCheckSQL.selectSub, function (err, selectSubResult) {
                     if (selectSubResult) {
+                        responseData.code = 0;
                         responseData.message = '取题成功';
                         responseData.subData = {
                             check: [
                                 {
-                                    check_id_1: selectSubResult[0].id,
-                                    check_title_1: selectSubResult[0].check_title,
-                                    check_options_A_1: selectSubResult[0].check_options_A,
-                                    check_options_B_1: selectSubResult[0].check_options_B,
-                                    check_options_C_1: selectSubResult[0].check_options_C,
-                                    check_options_D_1: selectSubResult[0].check_options_D,
+                                    title_num: 1,
+                                    check_id: selectSubResult[0].id,
+                                    check_title: selectSubResult[0].check_title,
+                                    check_options_A: selectSubResult[0].check_options_A,
+                                    check_options_B: selectSubResult[0].check_options_B,
+                                    check_options_C: selectSubResult[0].check_options_C,
+                                    check_options_D: selectSubResult[0].check_options_D,
                                     check_result_1: selectSubResult[0].check_result
                                 },
                                 {
-                                    check_id_1_2: selectSubResult[1].id,
-                                    check_title_2: selectSubResult[1].check_title,
-                                    check_options_A_2: selectSubResult[1].check_options_A,
-                                    check_options_B_2: selectSubResult[1].check_options_B,
-                                    check_options_C_2: selectSubResult[1].check_options_C,
-                                    check_options_D_2: selectSubResult[1].check_options_D,
-                                    check_result_2: selectSubResult[1].check_result
+                                    title_num: 2,
+                                    check_id: selectSubResult[1].id,
+                                    check_title: selectSubResult[1].check_title,
+                                    check_options_A: selectSubResult[1].check_options_A,
+                                    check_options_B: selectSubResult[1].check_options_B,
+                                    check_options_C: selectSubResult[1].check_options_C,
+                                    check_options_D: selectSubResult[1].check_options_D,
+                                    check_result: selectSubResult[1].check_result
+                                },
+                                {
+                                    title_num: 3,
+                                    check_id: selectSubResult[2].id,
+                                    check_title: selectSubResult[2].check_title,
+                                    check_options_A: selectSubResult[2].check_options_A,
+                                    check_options_B: selectSubResult[2].check_options_B,
+                                    check_options_C: selectSubResult[2].check_options_C,
+                                    check_options_D: selectSubResult[2].check_options_D,
+                                    check_result: selectSubResult[2].check_result
+                                },
+                                {
+                                    title_num: 4,
+                                    check_id: selectSubResult[3].id,
+                                    check_title: selectSubResult[3].check_title,
+                                    check_options_A: selectSubResult[3].check_options_A,
+                                    check_options_B: selectSubResult[3].check_options_B,
+                                    check_options_C: selectSubResult[3].check_options_C,
+                                    check_options_D: selectSubResult[3].check_options_D,
+                                    check_result: selectSubResult[3].check_result
+                                },
+                                {
+                                    title_num: 5,
+                                    check_id: selectSubResult[4].id,
+                                    check_title: selectSubResult[4].check_title,
+                                    check_options_A: selectSubResult[4].check_options_A,
+                                    check_options_B: selectSubResult[4].check_options_B,
+                                    check_options_C: selectSubResult[4].check_options_C,
+                                    check_options_D: selectSubResult[4].check_options_D,
+                                    check_result: selectSubResult[4].check_result
+                                },
+                                {
+                                    title_num: 6,
+                                    check_id: selectSubResult[5].id,
+                                    check_title: selectSubResult[5].check_title,
+                                    check_options_A: selectSubResult[5].check_options_A,
+                                    check_options_B: selectSubResult[5].check_options_B,
+                                    check_options_C: selectSubResult[5].check_options_C,
+                                    check_options_D: selectSubResult[5].check_options_D,
+                                    check_result: selectSubResult[5].check_result
+                                },
+                                {
+                                    title_num: 7,
+                                    check_id: selectSubResult[6].id,
+                                    check_title: selectSubResult[6].check_title,
+                                    check_options_A: selectSubResult[6].check_options_A,
+                                    check_options_B: selectSubResult[6].check_options_B,
+                                    check_options_C: selectSubResult[6].check_options_C,
+                                    check_options_D: selectSubResult[6].check_options_D,
+                                    check_result: selectSubResult[6].check_result
+                                },
+                                {
+                                    title_num: 8,
+                                    check_id: selectSubResult[7].id,
+                                    check_title: selectSubResult[7].check_title,
+                                    check_options_A: selectSubResult[7].check_options_A,
+                                    check_options_B: selectSubResult[7].check_options_B,
+                                    check_options_C: selectSubResult[7].check_options_C,
+                                    check_options_D: selectSubResult[7].check_options_D,
+                                    check_result: selectSubResult[7].check_result
                                 }
                             ]
                         };
-                        console.log(responseData.subData);
+                        /**设置响应头允许ajax跨域访问**/
+                        res.setHeader("Access-Control-Allow-Origin","*");
+                        /*星号表示所有的异域请求都可以接受，*/
+                        res.setHeader("Access-Control-Allow-Methods","GET,POST,PUT,DELETE");
                         res.json(responseData);
                     }
                 });
