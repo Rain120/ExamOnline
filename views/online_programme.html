@@ -329,14 +329,13 @@
             /**你的答案集合**/
             /**用户完成题数目**/
             var rightResult = 0;
-            var finishedCount = 1;
             var val = 0;
             check_btn.click(function () {
                 $('#codrops-header').hide();
                 $('#exam_content_style').hide();
                 exam_show_content.show();
                 exam_show_header.show();
-                $('#subject1').css('backgroundColor', 'green');
+                $('#subject1').css('backgroundColor', 'orange');
                 timer(intDiff);
                 check_btn.unbind("click");
                 check_btn.html("已提交答案");
@@ -388,13 +387,15 @@
             });
             submit_btn.click(function () {
                 if (confirm('正在考试ing，确定提交')) {
-                    for (var i = 0; i < selectResult.length; i++) {
+                    for (var i in selectResult) {
+                        console.log("examCheck.check[" + i + "].check_result==>" + examCheck.check[i].check_result);
                         console.log(selectResult[i] === examCheck.check[i].check_result);
-                        if( selectResult[i] === examCheck.check[i].check_result ) {
+                        if( selectResult[i].toUpperCase() === examCheck.check[i].check_result ) {
                             rightResult++;
                         }
                     }
                     alert("你的得分是：" + rightResult * 5);
+                    window.location.href = 'http://localhost:63342/ExamOnline/views/index.html';
                     return true;
                 } else {
                     return false;
@@ -403,18 +404,17 @@
             function changeSubj(examCheck) {
                 var nextCount = 0;
                 var prevCount = 0;
-                $(".subjs_option1").show();
+                var finishedCount = 0;
+                $(".subjs_option0").show();
                 $(":radio").click(function (){
-                    alert($(this).val());
                     selectResult.push($(this).val());
-                    val = parseInt(finishedCount / 8 * 100);
-                    console.log("parseInt(finishedCount / 8 * 100)===>" + finishedCount +" ==" + val);
+                    console.log("selectResult.push($(this).val())===>" + selectResult.length + "===>" + $(this).val());
+                    val = parseInt(++finishedCount / 8 * 100);
+                    console.log("parseInt(finishedCount / 8 * 100)===>" + selectResult.length +" ==" + val);
 
                     $("#mask_span").text( val );
 
                     $('.circle').each(function (index, el) {
-                        alert("$(this).find('#mask_span').text()==>" + $(this).find('#mask_span').text());
-//                        var num = $(this).find('#mask_span').text() * 3.6;
                         var num = $(this).find('#mask_span').text() * 3.6;
                         if (num <= 180) {
                             $(this).find('.right').css('transform', "rotate(" + num + "deg)");
@@ -422,11 +422,10 @@
                             $(this).find('.right').css('transform', "rotate(180deg)");
                             $(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
                         }
+                        $('#subject' + (count + 1) ).find('span').css('color','green');
                     });
-                    console.log("selectResult===>" + nextCount + ":" + selectResult[count]);
                 });
                 next_sub.click(function () {
-                    finishedCount++;
                     prevCount++;
                     console.log(examCheck.check[prevCount].title_num);
                     console.log("Next--" + prevCount);
@@ -438,11 +437,11 @@
                     p3.html(examCheck.check[prevCount].check_options_C);
                     p4.html(examCheck.check[prevCount].check_options_D);
                     $('#subject' + prevCount).css('backgroundColor', '#aaa');
-                    $('#subject' + (prevCount + 1)).css('backgroundColor', 'green');
+                    $('#subject' + (prevCount + 1)).css('backgroundColor', 'orange');
                     if (prevCount > 8) {
                         $(".subjs_option" + (prevCount - 1)).hide();
                         $(".subjs_option" + prevCount).show();
-                        $('#subject' + prevCount).css('backgroundColor', 'green');
+                        $('#subject' + prevCount).css('backgroundColor', 'orange');
                         next_sub.unbind("click");
                     }
                     nextCount = prevCount;
@@ -455,7 +454,7 @@
                     if (nextCount < 0) {
                         $(".subjs_option" + nextCount).show();
                         $(".subjs_option" + nextCount - 1).hide();
-                        $('#subject' + nextCount).css('backgroundColor', 'green');
+                        $('#subject' + nextCount).css('backgroundColor', 'orange');
                         prev_sub.unbind("click");
                         return;
                     }
@@ -466,7 +465,7 @@
                     p2.html(examCheck.check[nextCount].check_options_B);
                     p3.html(examCheck.check[nextCount].check_options_C);
                     p4.html(examCheck.check[nextCount].check_options_D);
-                    $('#subject' + (nextCount + 1)).css('backgroundColor', 'green');
+                    $('#subject' + (nextCount + 1)).css('backgroundColor', 'orange');
                     $('#subject' + (nextCount + 2)).css('backgroundColor', '#aaa');
                     prevCount = nextCount;
                     count = prevCount;
@@ -558,7 +557,7 @@
                 <div class="title_content">
                     <p class="exam_subject_title"></p>
                 </div>
-                <div class="subjs_option subjs_option1">
+                <div class="subjs_option subjs_option0">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check1" value="A"><span>A、</span><span
                             class="option_result p1"></span>
@@ -576,7 +575,7 @@
                             class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
-                <div class="subjs_option subjs_option2">
+                <div class="subjs_option subjs_option1">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check2" value="A"><span>A、</span><span
                             class="option_result p1"></span>
@@ -594,7 +593,7 @@
                             class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
-                <div class="subjs_option subjs_option3">
+                <div class="subjs_option subjs_option2">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check3" value="A"><span>A、</span><span
                             class="option_result p1"></span>
@@ -612,7 +611,7 @@
                             class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
-                <div class="subjs_option subjs_option4">
+                <div class="subjs_option subjs_option3">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check4" value="A"><span>A、</span><span
                             class="option_result p1"></span>
@@ -630,7 +629,7 @@
                             class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
-                <div class="subjs_option subjs_option5">
+                <div class="subjs_option subjs_option4">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check5" value="A"><span>A、</span><span
                             class="option_result p1"></span>
@@ -648,7 +647,7 @@
                             class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
-                <div class="subjs_option subjs_option6">
+                <div class="subjs_option subjs_option5">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check6" value="A"><span>A、</span><span
                             class="option_result p1"></span>
@@ -666,7 +665,7 @@
                             class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
-                <div class="subjs_option subjs_option7">
+                <div class="subjs_option subjs_option6">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check7" value="A"><span>A、</span><span
                             class="option_result p1"></span>
@@ -684,7 +683,7 @@
                             class="option_result p4"></span>
                     </a>
                 </div><!--subjs_option-->
-                <div class="subjs_option subjs_option8">
+                <div class="subjs_option subjs_option7">
                     <a class="sub_option" href="javascript:void(0);">
                         <input type="radio" name="check8" value="A"><span>A、</span><span
                             class="option_result p1"></span>

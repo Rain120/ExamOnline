@@ -328,7 +328,7 @@ router.get('/exam', function (req, res) {
                                     check_options_B: selectSubResult[0].check_options_B,
                                     check_options_C: selectSubResult[0].check_options_C,
                                     check_options_D: selectSubResult[0].check_options_D,
-                                    check_result_1: selectSubResult[0].check_result
+                                    check_result: selectSubResult[0].check_result
                                 },
                                 {
                                     title_num: 2,
